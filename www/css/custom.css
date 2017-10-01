@@ -1,0 +1,78 @@
+body {
+    background-color: #CECECE;
+}
+
+.navigation-bar {
+    background-color: #dc3545;
+}
+
+.navigation-bar a {
+    color: white;
+}
+
+.navbar-brand>img {
+    display:        inline-block;
+    -webkit-filter: invert(90%); filter: invert(90%);
+    margin-right:   20px;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+div.row {
+    width:        100%;
+    margin-right: 0;
+    margin-left:  0;
+}
+
+div.row.info div {
+    background-color: #F0F0F0;
+    min-height:       80px;
+    text-align:       center;
+    padding:          20px 0;
+}
+
+div.row.info div:first-child {
+    padding-right: 5px;
+    border-right:  5px solid #CECECE;
+}
+
+div.row.data {
+    border-bottom: 4px solid #F0F0F0;
+    padding:       10px 0;
+    width:         100%;
+}
+
+/** LOADING **/
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 )
+    url('http://i.stack.imgur.com/FhHRx.gif')
+    50% 50%
+    no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
