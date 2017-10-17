@@ -1,19 +1,25 @@
 body {
-    background-color: #CECECE;
+    background-color: white;
+    color: white;
 }
 
 .navigation-bar {
-    background-color: #dc3545;
+    background-color: #383838;
+    width: 100%;
+    height: 70px;
 }
 
 .navigation-bar a {
     color: white;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
 .navbar-brand>img {
-    display:        inline-block;
-    -webkit-filter: invert(90%); filter: invert(90%);
-    margin-right:   20px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 30px;
+    margin-top: -5px;
 }
 
 .navbar {
@@ -21,58 +27,95 @@ body {
 }
 
 div.row {
-    width:        100%;
+    width: 100%;
     margin-right: 0;
-    margin-left:  0;
+    margin-left: 0;
 }
 
 div.row.info div {
-    background-color: #F0F0F0;
-    min-height:       80px;
-    text-align:       center;
-    padding:          20px 0;
+    background-color: #181716;
+    height: 70px;
+    text-align: center;
+    color: white;
 }
 
-div.row.info div:first-child {
-    padding-right: 5px;
-    border-right:  5px solid #CECECE;
+div.row.info div {
+    padding-top: 23px;
+    font-size: 18px;
+}
+
+@media (max-width: 465px) {
+    #date {
+        padding-top: 12px;
+    }
+}
+
+div.row.info div:last-child {
+    padding-top: 17px;
+    background-color: #181716;
+}
+
+div.row.data div:first-child img {
+    margin-left: 0px;
 }
 
 div.row.data {
-    border-bottom: 4px solid #F0F0F0;
-    padding:       10px 0;
-    width:         100%;
+    border-bottom: 1px solid #c6c6c6;
+    padding: 10px 0;
+    width: 100%;
+    color: #5b5050;
+    text-align: center;
 }
 
+
 /** LOADING **/
+
 
 /* Start by setting display:none to make this hidden.
    Then we position it in relation to the viewport window
    with position:fixed. Width, height, top and left speak
    for themselves. Background we set to 80% white with
    our animation centered, and no-repeating */
+
 .modal {
-    display:    none;
-    position:   fixed;
-    z-index:    1000;
-    top:        0;
-    left:       0;
-    height:     100%;
-    width:      100%;
-    background: rgba( 255, 255, 255, .8 )
-    url('http://i.stack.imgur.com/FhHRx.gif')
-    50% 50%
-    no-repeat;
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
 }
+
 
 /* When the body has the loading class, we turn
    the scrollbar off with overflow:hidden */
+
 body.loading {
     overflow: hidden;
 }
 
+
 /* Anytime the body has the loading class, our
    modal element will be visible */
+
 body.loading .modal {
     display: block;
+}
+
+
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Merriweather", serif;
+    font-size: 32px;
 }
