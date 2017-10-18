@@ -11,7 +11,7 @@ var app = new Vue({
     el: '#app',
 
     data: {
-        today: moment().format('MMMM Do YYYY, h:mm'),
+        today: moment().format('MMMM Do YYYY'),
         moves: 'Actualizar',
         results: null
     },
